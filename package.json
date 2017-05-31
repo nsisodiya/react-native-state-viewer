@@ -1,0 +1,23 @@
+{
+  "name": "react-native-state-viewer",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "scripts": {
+    "prettier": "prettier --write \"server/**/*.js\"",
+    "eslint": "eslint src",
+    "start": "nodemon ./server/server.js --exec babel-node -e js"
+  },
+  "repository": "git@github.com:nsisodiya/react-native-state-viewer.git",
+  "author": "Narendra Sisodiya <narendra@billexo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "express": "^4.15.3",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-import": "^2.0.4",
+    "babel-preset-env": "^1.5.1",
+    "eslint": "^3.19.0"
+  }
+}
