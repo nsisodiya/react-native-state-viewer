@@ -11,6 +11,7 @@
   "author": "Narendra Sisodiya <narendra@billexo.com>",
   "license": "MIT",
   "dependencies": {
+    "@nsisodiya/eventbus": "^1.1.0",
     "babel-cli": "^6.24.1",
     "express": "^4.15.3",
     "express-http-proxy": "^1.0.3",

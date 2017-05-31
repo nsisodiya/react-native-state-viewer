@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@nsisodiya/eventbus@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@nsisodiya/eventbus/-/eventbus-1.1.0.tgz#62deab92d58247d8bc56b7f9b290711ffa4ba98b"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
