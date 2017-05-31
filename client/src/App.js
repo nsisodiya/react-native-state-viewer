@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import JsonViewer from "react-json-viewer";
 class App extends Component {
   render() {
     return (
@@ -10,6 +10,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React Native State Viewer</h2>
         </div>
+        <JsonViewer
+          json={{
+            data: 10
+          }}
+        />
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
