@@ -6,13 +6,17 @@ import express from "express";
 const app = express();
 import websocketServer from "./websocketServer";
 import proxyServer from "./proxyServer";
-import commonDb from "./commonDb";
 import eventBus from "./eventBus";
+import applyBodyParser from "./applyBodyParser";
 
-app.get("/jump", function(req, res) {
-  res.send("Jumping Success");
-  commonDb.count = commonDb.count + 100;
-  eventBus.publish("UPDATE_AVAILABLE");
+applyBodyParser(app);
+app.post("/stateUpdate", function(req, res) {
+  console.log("Mobile App requested a State Update", req.body);
+  const body = JSON.parse(JSON.stringify(req.body));
+  res.json({
+    success: true
+  });
+  eventBus.publish("UPDATE_AVAILABLE", body);
 });
 
 proxyServer(app);

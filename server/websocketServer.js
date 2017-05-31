@@ -3,7 +3,6 @@
  */
 
 import eventBus from "./eventBus";
-import commonDb from "./commonDb";
 export default function websocketServer(app) {
   require("express-ws")(app);
   app.ws("/", function(ws /*, req*/) {
@@ -12,8 +11,8 @@ export default function websocketServer(app) {
       console.log("Got Message from Client", msg);
     });
 
-    var unsubFunc = eventBus.subscribe("UPDATE_AVAILABLE", function() {
-      ws.send(JSON.stringify({ count: commonDb.count }));
+    var unsubFunc = eventBus.subscribe("UPDATE_AVAILABLE", function(body) {
+      ws.send(JSON.stringify(body));
     });
 
     ws.on("close", function() {

@@ -13,6 +13,7 @@
   "dependencies": {
     "@nsisodiya/eventbus": "^1.1.0",
     "babel-cli": "^6.24.1",
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-http-proxy": "^1.0.3",
     "express-ws": "^3.0.0",
