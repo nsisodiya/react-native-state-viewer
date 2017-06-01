@@ -11,7 +11,6 @@ import applyBodyParser from "./applyBodyParser";
 
 applyBodyParser(app);
 app.post("/stateUpdate", function(req, res) {
-  console.log("Mobile App requested a State Update", req.body);
   const body = JSON.parse(JSON.stringify(req.body));
   res.json({
     success: true

@@ -1,13 +1,15 @@
 # react-native-state-viewer
-This is a debugger tool designed for debug react native apps. But It can be used to debug State of any react app.
-
+This is a debugger tool designed for debug react native apps. But It can be used to debug "State" of any kind app.
+Yes, Any kind of app/project (desktop/mobile) etc.
 # What exactly is this?
 
-Check the following image. You will get idea.
+Check the following image. Image show debugging (viewing) state of a component of a react-native app.
 
 ![https://media.giphy.com/media/l0IykD4Qlupu1FxpC/giphy.gif](https://media.giphy.com/media/l0IykD4Qlupu1FxpC/giphy.gif)
 
 Basically, Whenever your component "re-render", It will send current "this.state" to this server. which will convert this JSON into a tabular format.
+
+This is a sample usecase, This tool can be used in various ways.
 # How to use this project
 ## Start State Viewer
 ```

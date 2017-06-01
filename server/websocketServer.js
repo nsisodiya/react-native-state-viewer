@@ -17,7 +17,6 @@ export default function websocketServer(app) {
 
     ws.on("close", function() {
       unsubFunc();
-      console.log("Stopping client interval");
     });
   });
 }

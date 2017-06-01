@@ -21,7 +21,6 @@ function start(connection) {
       callBackArrays.forEach(function(callback) {
         callback(json);
       });
-      console.log("Data received from server", json);
     } catch (e) {
       console.log("This doesn't look like a valid JSON: ", message.data);
       return;
