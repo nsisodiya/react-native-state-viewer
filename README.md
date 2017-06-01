@@ -4,7 +4,9 @@ This is a debugger tool designed for debug react native apps. But It can be used
 # What exactly is this?
 
 Check the following image. You will get idea.
+
 ![https://media.giphy.com/media/l0IykD4Qlupu1FxpC/giphy.gif](https://media.giphy.com/media/l0IykD4Qlupu1FxpC/giphy.gif)
+
 Basically, Whenever your component "re-render", It will send current "this.state" to this server. which will convert this JSON into a tabular format.
 # How to use this project
 ## Start State Viewer
