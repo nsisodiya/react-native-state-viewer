@@ -6,7 +6,7 @@ This is a debugger tool designed for debug react native apps. But It can be used
 Check the following image. You will get idea.
 
 # How to use this project
-
+![https://media.giphy.com/media/l0IykD4Qlupu1FxpC/giphy.gif](https://media.giphy.com/media/l0IykD4Qlupu1FxpC/giphy.gif)
 ## Start State Viewer
 ```
 git clone https://github.com/nsisodiya/react-native-state-viewer.git
@@ -83,3 +83,15 @@ class HelloWorldApp extends Component {
 
 AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 ```
+
+# RoadMap
+
+* I have created this tool in just 1 day. I wanted to debug React Native mobile app.
+* Please fill bugs/improments/ideas.
+* Right now, We are not sending Component Name with StateUpdate. we can modify this tool to have per component State Viewing. Rightnow, It just dump any state update on UI.
+* This can also be used to measure frequency of render function and May be we can store State to have navigation between different states.
+* We can also prepare a Docker image so that installation can be done without headache.
+* This is just a idea. Need community support to enhance it.
+
+# Send Pull Request
+![https://media.giphy.com/media/nlRYDrPQF5cI0/giphy.gif](https://media.giphy.com/media/nlRYDrPQF5cI0/giphy.gif)
