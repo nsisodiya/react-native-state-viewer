@@ -31,5 +31,55 @@ curl -H "Content-Type: application/json" -X POST -d '{"count":"40","city":"Delhi
 ## Post State from ReactNative App
 
 Copy paste following code.
+Create a file called postStateUpdate.js
 ```
+export default function postStateUpdate(target, name, descriptor) {
+  const oldFunction = descriptor.value;
+  descriptor.value = function propsInjectorFunction() {
+    try {
+      fetch("http://192.168.1.3:12473/stateUpdate", {
+        credentials: "include",
+        method: "POST",
+        body: JSON.stringify({
+          state: this.state
+        }),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        }
+      }).then(response => {
+        return response.json();
+      });
+    } catch (err) {
+      /*No need to do anything*/
+    }
+
+    return oldFunction.bind(this)(this.props);
+  };
+  return descriptor;
+}
+```
+
+Now go to react component and add following decorator.
+
+```
+import React, { Component } from 'react';
+import { AppRegistry, Text } from 'react-native';
+import postStateUpdate from './postStateUpdate';
+
+class HelloWorldApp extends Component {
+  state = {
+    lang: "JavaScript",
+    message: "Hello World",
+    counter: 10
+  };
+  render() {
+    @postStateUpdate
+    return (
+      <Text>Hello world!</Text>
+    );
+  }
+}
+
+AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 ```
