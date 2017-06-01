@@ -2,7 +2,7 @@
  * Created by narendrasisodiya on 31/05/17.
  */
 var callBackArrays = [];
-function log(connection) {
+function start(connection) {
   connection.onopen = function() {
     // connection is opened and ready to use
     console.log("Connection is ready");
@@ -30,7 +30,7 @@ function log(connection) {
   };
 }
 const cc = new WebSocket("ws://localhost:12473");
-log(cc);
+start(cc);
 export default {
   onMessage: function(callback) {
     callBackArrays.push(callback);

@@ -4,7 +4,16 @@ import JsonViewer from "react-json-viewer";
 import StateViewer from "./StateViewer";
 
 function JSONRender(data) {
-  return <JsonViewer json={data} />;
+  return (
+    <center>
+      <JsonViewer
+        style={{
+          border: "1px solid black"
+        }}
+        json={data}
+      />
+    </center>
+  );
 }
 class App extends Component {
   render() {

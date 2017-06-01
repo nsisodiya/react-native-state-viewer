@@ -2,7 +2,8 @@
  * Created by narendrasisodiya on 31/05/17.
  */
 
-import React, { Component, PropTypes } from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import wsConnection from "./wsConnection";
 class StateViewer extends Component {
   constructor(props, context) {
@@ -18,7 +19,9 @@ class StateViewer extends Component {
   }
   render() {
     return (
-      <div>
+      <div style={{
+        paddingTop: 20
+      }}>
         {this.props.render(this.state.value)}
       </div>
     );
